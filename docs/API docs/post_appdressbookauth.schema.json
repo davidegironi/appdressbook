@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Request a login",
+  "description": "RESTful POST appdressbookauth route",
+  "properties": {
+    "token": {
+      "type": "string",
+      "title": "Token in the JWT format"
+    }
+  },
+  "required": [
+    "token"
+  ]
+}

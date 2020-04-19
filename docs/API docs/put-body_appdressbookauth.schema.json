@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Request a login token refresh, body",
+  "description": "RESTful PUT appdressbookauth route",
+  "properties": {
+    "expiresdays": {
+      "type": "null",
+      "title": "Expires days"
+    }
+  },
+  "required": [
+    "expiresdays"
+  ]
+}

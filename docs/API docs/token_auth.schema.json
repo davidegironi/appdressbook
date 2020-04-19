@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "JWT token schema",
+  "description": "Schema used in the JWT token",
+  "properties": {
+    "_username": {
+      "type": "string",
+      "title": "Username entered"
+    },
+    "_displayname": {
+      "type": "string",
+      "title": "Display name of the used"
+    },
+    "exp": {
+      "type": "integer",
+      "title": "Expires time, expressed in seconds or a string describing a time span zeit/ms"
+    },
+    "iss": {
+      "type": "string",
+      "title": "Token issuer"
+    },
+    "aud": {
+      "type": "string",
+      "title": "Token audience"
+    },
+    "iat": {
+      "type": "integer",
+      "title": "Issued at, expressed in seconds or a string describing a time span zeit/ms"
+    },
+    "nbf": {
+      "type": "integer",
+      "title": "Not valid before, expressed in seconds or a string describing a time span zeit/ms"
+    }
+  },
+  "required": [
+    "_username",
+    "_displayname",
+    "exp"
+  ]
+}

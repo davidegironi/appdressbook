@@ -1,0 +1,211 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Contact list",
+  "description": "RESTful GET appdressbookcontacts?mode=l route",
+  "properties": {
+    "persons": {
+      "type": "array",
+      "title": "List of persons",
+      "items": [
+        {
+          "type": "object",
+          "title": "Person informations",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "title": "Person unique id"
+            },
+            "code": {
+              "type": "string",
+              "title": "Person unique code"
+            },
+            "firstname": {
+              "type": "string",
+              "title": "Person firstname"
+            },
+            "lastname": {
+              "type": "string",
+              "title": "Person lastname"
+            },
+            "locationcode": {
+              "type": [ "string", "null" ],
+              "title": "Person location by code"
+            },
+            "companycode": {
+              "type": [ "string", "null" ],
+              "title": "Person company by code"
+            },
+            "roleinfo": {
+              "type": [ "string", "null" ],
+              "title": "Person role description"
+            },
+            "rolecode": {
+              "type": [ "string", "null" ],
+              "title": "Person role by code"
+            },
+            "contacts": {
+              "type": "array",
+              "title": "List of person contacts",
+              "items": [
+                {
+                  "type": "object",
+                  "title": "Contact information",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "title": "Contact by code"
+                    },
+                    "value": {
+                      "type": "string",
+                      "title": "Contact value"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "value"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "code",
+            "firstname",
+            "lastname"
+          ]
+        }
+      ]
+    },
+    "contacttypes": {
+      "type": "array",
+      "title": "List of type of contacts",
+      "items": [
+        {
+          "type": "object",
+          "title": "Contact type information",
+          "properties": {
+            "code": {
+              "type": "string",
+              "title": "Contact unique code"
+            },
+            "name": {
+              "type": "string",
+              "title": "Contact descriptive name"
+            },
+            "color": {
+              "type": [ "string", "null" ],
+              "title": "Contact color in hex format"
+            },
+            "type": {
+              "type": "string",
+              "title": "Contact type, app link openable types are [email|phone]"
+            }
+          },
+          "required": [
+            "code",
+            "name",
+            "type"
+          ]
+        }
+      ]
+    },
+    "companytypes": {
+      "type": "array",
+      "title": "List of type of companies",
+      "items": [
+        {
+          "type": "object",
+          "title": "Company type information",
+          "properties": {
+            "code": {
+              "type": "string",
+              "title": "Company unique code"
+            },
+            "name": {
+              "type": "string",
+              "title": "Company descriptive name"
+            },
+            "color": {
+              "type": [ "string", "null" ],
+              "title": "Company color, in hex format"
+            }
+          },
+          "required": [
+            "code",
+            "name"
+          ]
+        }
+      ]
+    },
+    "roletypes": {
+      "type": "array",
+      "title": "List of type of roles",
+      "items": [
+        {
+          "type": "object",
+          "title": "Role type information",
+          "properties": {
+            "code": {
+              "type": "string",
+              "title": "Role unique code"
+            },
+            "name": {
+              "type": "string",
+              "title": "Role descriptive name"
+            },
+            "color": {
+              "type": [ "string", "null" ],
+              "title": "Role color, in hex format"
+            }
+          },
+          "required": [
+            "code",
+            "name"
+          ]
+        }
+      ]
+    },
+    "locationtypes": {
+      "type": "array",
+      "title": "List of type of locations",
+      "items": [
+        {
+          "type": "object",
+          "title": "Location type information",
+          "properties": {
+            "code": {
+              "type": "string",
+              "title": "Location unique code"
+            },
+            "name": {
+              "type": "string",
+              "title": "Location descriptive name"
+            },
+            "color": {
+              "type": [ "string", "null" ],
+              "title": "Location color, in hex format"
+            }
+          },
+          "required": [
+            "code",
+            "name"
+          ]
+        }
+      ]
+    },
+    "hash": {
+      "type": "string",
+      "title": "Contact list hashcode"
+    }
+  },
+  "required": [
+    "persons",
+    "contacttypes",
+    "companytypes",
+    "roletypes",
+    "locationtypes",
+    "hash"
+  ]
+}

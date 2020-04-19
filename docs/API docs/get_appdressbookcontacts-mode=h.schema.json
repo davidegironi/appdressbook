@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Contact list hash",
+  "description": "RESTful GET appdressbookcontacts?mode=h route",
+  "properties": {
+    "hash": {
+      "type": "string",
+      "title": "Hash code of the current contact list"
+    }
+  },
+  "required": [
+    "hash"
+  ]
+}
