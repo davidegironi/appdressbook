@@ -1,6 +1,6 @@
 {
   "name": "appdressbookapisample",
-  "description": "A sample API server for the AppDressbook app",
+  "description": "A sample API server for the AppDressBook app",
   "version": "1.0.0",
   "author": {
     "name": "Davide Gironi"

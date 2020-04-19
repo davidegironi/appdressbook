@@ -44,7 +44,7 @@ const imageSearch = require('../../../images/search.png');
 const imageClear = require('../../../images/clear.png');
 
 // set timeout for the first load
-const upsertContactsTimeoutfirst = 3000;
+const upsertContactsTimeoutfirst = 30000;
 // set timeout for the next loads
 const upsertContactsTimeout = 120000;
 
@@ -333,29 +333,45 @@ export default function AddressBook() {
     Config.loadingTimeThreshold);
 
     // get contacts
-    AddressBookHelper.upsertContacts(settings.apiuri, authtoken, upsertContactsTimeoutfirst)
-      .then((getcontacts) => {
-        if (getcontacts.errors != null) {
-          ToastHelper.showAlertMessage(getcontacts.errors);
-        } else if (mounted) {
-          setContacts(getcontacts.contacts);
-          // refresh latest contacts
-          AddressBookHelper.refreshLatestcontacts(
-            getcontacts.contacts,
-            latestcontactsmaxitems
-          )
-            .then((latestcontactsnew) => {
-              if (latestcontactsnew != null) {
-                setLatestcontacts(latestcontactsnew.latestcontacts);
-              }
-            })
-            .catch(() => {
-              ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadinglatestcontacts'));
-            });
-        }
+    NetInfo.fetch()
+      .then((netInfo) => {
+        const isonline = netInfo == null
+          ? true
+          : netInfo.isConnected && netInfo.isInternetReachable;
+        AddressBookHelper.upsertContacts(
+          isonline, settings.apiuri, authtoken, upsertContactsTimeoutfirst
+        )
+          .then((getcontacts) => {
+            if (getcontacts.errors != null) {
+              setContacts([]);
+              ToastHelper.showAlertMessage(getcontacts.errors);
+            } else if (mounted) {
+              setContacts(getcontacts.contacts);
+              // refresh latest contacts
+              AddressBookHelper.refreshLatestcontacts(
+                getcontacts.contacts,
+                latestcontactsmaxitems
+              )
+                .then((latestcontactsnew) => {
+                  if (latestcontactsnew != null) {
+                    setLatestcontacts(latestcontactsnew.latestcontacts);
+                  }
+                })
+                .catch(() => {
+                  ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadinglatestcontacts'));
+                });
+            } else {
+              setContacts([]);
+            }
+          })
+          .catch(() => {
+            setContacts([]);
+            ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadingcontacts'));
+          });
       })
       .catch(() => {
-        ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadingcontacts'));
+        setContacts([]);
+        ToastHelper.showAlertMessage(I18n.t('addressbook.errornetwork'));
       });
 
     // refresh contacts
@@ -371,7 +387,9 @@ export default function AddressBook() {
                 (settings.getcontactsrefresh && settings.getcontactsrefreshwifi && netInfo.type === 'wifi')
                     || (settings.getcontactsrefresh && netInfo.type !== 'none')
               ) {
-                AddressBookHelper.upsertContacts(settings.apiuri, authtoken, upsertContactsTimeout)
+                AddressBookHelper.upsertContacts(
+                  true, settings.apiuri, authtoken, upsertContactsTimeout
+                )
                   .then((getcontacts) => {
                     if (getcontacts.errors != null) {
                       ToastHelper.showAlertMessage(getcontacts.errors);
@@ -627,7 +645,7 @@ const styles = StyleSheet.create({
   },
   addressbooklistletterstext: {
     fontSize: 14,
-    paddingBottom: 2.5,
+    paddingBottom: 2,
     textAlign: 'center'
   },
   addressbooklistsectionview: {

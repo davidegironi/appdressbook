@@ -16,7 +16,8 @@ export default {
       errorunknown: 'Unknown error happened',
       errorremoteunknown: 'Remote service response error ok unknown error happened',
       erroremptyresponse: 'Empty response data',
-      errorinvaliddata: 'Invalid data loaded'
+      errorinvaliddata: 'Invalid data loaded',
+      errornetwork: 'Error getting network status'
     },
     addressbookcontact: {
       nocontent: 'No contact loaded',

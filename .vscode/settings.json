@@ -1,7 +1,7 @@
 {
   "search.exclude": {
-    "**/ios": true,
-    "**/android": true
+    // "**/ios": true,
+    // "**/android": true
   },
   "editor.tabSize": 2,
   "editor.formatOnSave": true,

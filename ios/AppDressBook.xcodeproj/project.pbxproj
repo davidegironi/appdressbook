@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AppDressbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppDressbookTests.m */; };
-		1154860247908EE343AD53F5 /* libPods-AppDressbook-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F4BFC3CFDD7B830773709C /* libPods-AppDressbook-tvOS.a */; };
+		00E356F31AD99517003FC87E /* AppDressBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppDressBookTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		222F0A051581093C42034AFC /* libPods-AppDressbook-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B7DDD3DDBC0B6E231E68E1 /* libPods-AppDressbook-tvOSTests.a */; };
+		25295A9DD788BE65128A38D8 /* libPods-AppDressBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2545E21661F231D4CDC4BAA /* libPods-AppDressBook.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* AppDressbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppDressbookTests.m */; };
-		4C4D7B704A262A138B91FC7B /* libPods-AppDressbookTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5C4D717F0FFE11125D4C56 /* libPods-AppDressbookTests.a */; };
-		EF4E8C6A447B1625C17BF75D /* libPods-AppDressbook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F65C242EB1EEC41DE2F66DC1 /* libPods-AppDressbook.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* AppDressBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppDressBookTests.m */; };
+		4A12DFA7244CC16F00240116 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A12DFA6244CC16F00240116 /* AuthenticationServices.framework */; };
+		70151341E0B5B25BD86F1F89 /* libPods-AppDressBook-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 636D70F61D14397F2A1FBCF9 /* libPods-AppDressBook-tvOSTests.a */; };
+		AC54DE66E261CD78E5947300 /* libPods-AppDressBook-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CE82A5ABA724EAADA2FDE3 /* libPods-AppDressBook-tvOS.a */; };
+		B243B1009FCBB2F48D935232 /* libPods-AppDressBookTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E40BFB53AAD9F51372D46DF /* libPods-AppDressBookTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +29,14 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = AppDressbook;
+			remoteInfo = AppDressBook;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "AppDressbook-tvOS";
+			remoteInfo = "AppDressBook-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,30 +44,40 @@
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* AppDressBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDressBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AppDressbookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDressbookTests.m; sourceTree = "<group>"; };
-		01F4BFC3CFDD7B830773709C /* libPods-AppDressbook-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressbook-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* AppDressBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDressBookTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AppDressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDressbook/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDressbook/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDressBook/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDressBook/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AppDressbook/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AppDressbook/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AppDressbook/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AppDressBook/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AppDressBook/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AppDressBook/main.m; sourceTree = "<group>"; };
+		141A7B1A019FAB23A91F553B /* Pods-AppDressBook-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOS/Pods-AppDressBook-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		24519B1AF99900D92F490D6C /* Pods-AppDressBook-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOSTests/Pods-AppDressBook-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* AppDressBook-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppDressBook-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* AppDressBook-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppDressBook-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3297C61DDE05495C06FD9679 /* Pods-AppDressbook-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbook-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AppDressbook-tvOSTests/Pods-AppDressbook-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		38B18C522C4390631B5F1C92 /* Pods-AppDressbookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbookTests.release.xcconfig"; path = "Target Support Files/Pods-AppDressbookTests/Pods-AppDressbookTests.release.xcconfig"; sourceTree = "<group>"; };
-		57B7DDD3DDBC0B6E231E68E1 /* libPods-AppDressbook-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressbook-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D5C4D717F0FFE11125D4C56 /* libPods-AppDressbookTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressbookTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EABA0227A7E950EF406718D /* Pods-AppDressbook-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbook-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AppDressbook-tvOS/Pods-AppDressbook-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		AED21BE5DFA447690451A82C /* Pods-AppDressbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbook.release.xcconfig"; path = "Target Support Files/Pods-AppDressbook/Pods-AppDressbook.release.xcconfig"; sourceTree = "<group>"; };
-		CAC8DF14605420AC4A5B7B81 /* Pods-AppDressbookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbookTests.debug.xcconfig"; path = "Target Support Files/Pods-AppDressbookTests/Pods-AppDressbookTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CC12BC68F481C8BADE5B67C5 /* Pods-AppDressbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbook.debug.xcconfig"; path = "Target Support Files/Pods-AppDressbook/Pods-AppDressbook.debug.xcconfig"; sourceTree = "<group>"; };
+		3297C61DDE05495C06FD9679 /* Pods-AppDressBook-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOSTests/Pods-AppDressBook-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38B18C522C4390631B5F1C92 /* Pods-AppDressBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBookTests.release.xcconfig"; path = "Target Support Files/Pods-AppDressBookTests/Pods-AppDressBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E40BFB53AAD9F51372D46DF /* libPods-AppDressBookTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressBookTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4107364876B8FC4F6BFD80F4 /* Pods-AppDressBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBookTests.release.xcconfig"; path = "Target Support Files/Pods-AppDressBookTests/Pods-AppDressBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A12DFA5244CC16E00240116 /* AppDressBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AppDressBook.entitlements; path = AppDressBook/AppDressBook.entitlements; sourceTree = "<group>"; };
+		4A12DFA6244CC16F00240116 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		636D70F61D14397F2A1FBCF9 /* libPods-AppDressBook-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressBook-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		898F4EC4618599F614D59CE4 /* Pods-AppDressBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBook/Pods-AppDressBook.debug.xcconfig"; sourceTree = "<group>"; };
+		9EABA0227A7E950EF406718D /* Pods-AppDressBook-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOS/Pods-AppDressBook-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A686ADCFAA618DC206AD7E08 /* Pods-AppDressBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook.release.xcconfig"; path = "Target Support Files/Pods-AppDressBook/Pods-AppDressBook.release.xcconfig"; sourceTree = "<group>"; };
+		AED21BE5DFA447690451A82C /* Pods-AppDressBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook.release.xcconfig"; path = "Target Support Files/Pods-AppDressBook/Pods-AppDressBook.release.xcconfig"; sourceTree = "<group>"; };
+		C14A504E14ABEF36BF82B335 /* Pods-AppDressBook-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOSTests/Pods-AppDressBook-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2545E21661F231D4CDC4BAA /* libPods-AppDressBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC8DF14605420AC4A5B7B81 /* Pods-AppDressBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBookTests.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBookTests/Pods-AppDressBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC12BC68F481C8BADE5B67C5 /* Pods-AppDressBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBook/Pods-AppDressBook.debug.xcconfig"; sourceTree = "<group>"; };
+		E4CE82A5ABA724EAADA2FDE3 /* libPods-AppDressBook-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressBook-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B147D296C43AC009E05904 /* Pods-AppDressBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBookTests.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBookTests/Pods-AppDressBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1C6108F658B6DE3642723C /* Pods-AppDressBook-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOS/Pods-AppDressBook-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F65C242EB1EEC41DE2F66DC1 /* libPods-AppDressbook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressbook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7A8E0868E261E29C3E3A81C /* Pods-AppDressbook-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbook-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AppDressbook-tvOS/Pods-AppDressbook-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		FEBCE36AB4A783A26C33014D /* Pods-AppDressbook-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbook-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AppDressbook-tvOSTests/Pods-AppDressbook-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F7A8E0868E261E29C3E3A81C /* Pods-AppDressBook-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOS/Pods-AppDressBook-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		FEBCE36AB4A783A26C33014D /* Pods-AppDressBook-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressBook-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AppDressBook-tvOSTests/Pods-AppDressBook-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4D7B704A262A138B91FC7B /* libPods-AppDressbookTests.a in Frameworks */,
+				B243B1009FCBB2F48D935232 /* libPods-AppDressBookTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4E8C6A447B1625C17BF75D /* libPods-AppDressbook.a in Frameworks */,
+				4A12DFA7244CC16F00240116 /* AuthenticationServices.framework in Frameworks */,
+				25295A9DD788BE65128A38D8 /* libPods-AppDressBook.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1154860247908EE343AD53F5 /* libPods-AppDressbook-tvOS.a in Frameworks */,
+				AC54DE66E261CD78E5947300 /* libPods-AppDressBook-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +110,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222F0A051581093C42034AFC /* libPods-AppDressbook-tvOSTests.a in Frameworks */,
+				70151341E0B5B25BD86F1F89 /* libPods-AppDressBook-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AppDressbookTests */ = {
+		00E356EF1AD99517003FC87E /* AppDressBookTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AppDressbookTests.m */,
+				00E356F21AD99517003FC87E /* AppDressBookTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AppDressbookTests;
+			path = AppDressBookTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,9 +134,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* AppDressbook */ = {
+		13B07FAE1A68108700A75B9A /* AppDressBook */ = {
 			isa = PBXGroup;
 			children = (
+				4A12DFA5244CC16E00240116 /* AppDressBook.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -133,18 +146,19 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = AppDressbook;
+			name = AppDressBook;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A12DFA6244CC16F00240116 /* AuthenticationServices.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				F65C242EB1EEC41DE2F66DC1 /* libPods-AppDressbook.a */,
-				01F4BFC3CFDD7B830773709C /* libPods-AppDressbook-tvOS.a */,
-				57B7DDD3DDBC0B6E231E68E1 /* libPods-AppDressbook-tvOSTests.a */,
-				9D5C4D717F0FFE11125D4C56 /* libPods-AppDressbookTests.a */,
+				C2545E21661F231D4CDC4BAA /* libPods-AppDressBook.a */,
+				E4CE82A5ABA724EAADA2FDE3 /* libPods-AppDressBook-tvOS.a */,
+				636D70F61D14397F2A1FBCF9 /* libPods-AppDressBook-tvOSTests.a */,
+				3E40BFB53AAD9F51372D46DF /* libPods-AppDressBookTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +173,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* AppDressbook */,
+				13B07FAE1A68108700A75B9A /* AppDressBook */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AppDressbookTests */,
+				00E356EF1AD99517003FC87E /* AppDressBookTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BAF431C1AB89458FA821C808 /* Pods */,
@@ -185,14 +199,22 @@
 		BAF431C1AB89458FA821C808 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC12BC68F481C8BADE5B67C5 /* Pods-AppDressbook.debug.xcconfig */,
-				AED21BE5DFA447690451A82C /* Pods-AppDressbook.release.xcconfig */,
-				9EABA0227A7E950EF406718D /* Pods-AppDressbook-tvOS.debug.xcconfig */,
-				F7A8E0868E261E29C3E3A81C /* Pods-AppDressbook-tvOS.release.xcconfig */,
-				3297C61DDE05495C06FD9679 /* Pods-AppDressbook-tvOSTests.debug.xcconfig */,
-				FEBCE36AB4A783A26C33014D /* Pods-AppDressbook-tvOSTests.release.xcconfig */,
-				CAC8DF14605420AC4A5B7B81 /* Pods-AppDressbookTests.debug.xcconfig */,
-				38B18C522C4390631B5F1C92 /* Pods-AppDressbookTests.release.xcconfig */,
+				CC12BC68F481C8BADE5B67C5 /* Pods-AppDressBook.debug.xcconfig */,
+				AED21BE5DFA447690451A82C /* Pods-AppDressBook.release.xcconfig */,
+				9EABA0227A7E950EF406718D /* Pods-AppDressBook-tvOS.debug.xcconfig */,
+				F7A8E0868E261E29C3E3A81C /* Pods-AppDressBook-tvOS.release.xcconfig */,
+				3297C61DDE05495C06FD9679 /* Pods-AppDressBook-tvOSTests.debug.xcconfig */,
+				FEBCE36AB4A783A26C33014D /* Pods-AppDressBook-tvOSTests.release.xcconfig */,
+				CAC8DF14605420AC4A5B7B81 /* Pods-AppDressBookTests.debug.xcconfig */,
+				38B18C522C4390631B5F1C92 /* Pods-AppDressBookTests.release.xcconfig */,
+				898F4EC4618599F614D59CE4 /* Pods-AppDressBook.debug.xcconfig */,
+				A686ADCFAA618DC206AD7E08 /* Pods-AppDressBook.release.xcconfig */,
+				EA1C6108F658B6DE3642723C /* Pods-AppDressBook-tvOS.debug.xcconfig */,
+				141A7B1A019FAB23A91F553B /* Pods-AppDressBook-tvOS.release.xcconfig */,
+				C14A504E14ABEF36BF82B335 /* Pods-AppDressBook-tvOSTests.debug.xcconfig */,
+				24519B1AF99900D92F490D6C /* Pods-AppDressBook-tvOSTests.release.xcconfig */,
+				E7B147D296C43AC009E05904 /* Pods-AppDressBookTests.debug.xcconfig */,
+				4107364876B8FC4F6BFD80F4 /* Pods-AppDressBookTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -215,7 +237,7 @@
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
 			name = AppDressBookTests;
-			productName = AppDressbookTests;
+			productName = AppDressBookTests;
 			productReference = 00E356EE1AD99517003FC87E /* AppDressBookTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -235,7 +257,7 @@
 			dependencies = (
 			);
 			name = AppDressBook;
-			productName = AppDressbook;
+			productName = AppDressBook;
 			productReference = 13B07F961A680F5B00A75B9A /* AppDressBook.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -255,7 +277,7 @@
 			dependencies = (
 			);
 			name = "AppDressBook-tvOS";
-			productName = "AppDressbook-tvOS";
+			productName = "AppDressBook-tvOS";
 			productReference = 2D02E47B1E0B4A5D006451C7 /* AppDressBook-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -274,7 +296,7 @@
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
 			name = "AppDressBook-tvOSTests";
-			productName = "AppDressbook-tvOSTests";
+			productName = "AppDressBook-tvOSTests";
 			productReference = 2D02E4901E0B4A5D006451C7 /* AppDressBook-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -290,10 +312,12 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = V5FP23YC74;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = V5FP23YC74;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -306,7 +330,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AppDressbook" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AppDressBook" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -406,7 +430,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppDressbook-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AppDressBook-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,7 +452,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppDressbookTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AppDressBookTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -450,7 +474,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppDressbook-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AppDressBook-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -472,7 +496,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppDressbook-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AppDressBook-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,7 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AppDressbookTests.m in Sources */,
+				00E356F31AD99517003FC87E /* AppDressBookTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* AppDressbookTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* AppDressBookTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +600,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = AppDressbook;
+			path = AppDressBook;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -584,16 +608,17 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAC8DF14605420AC4A5B7B81 /* Pods-AppDressbookTests.debug.xcconfig */;
+			baseConfigurationReference = E7B147D296C43AC009E05904 /* Pods-AppDressBookTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V5FP23YC74;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AppDressbookTests/Info.plist;
+				INFOPLIST_FILE = AppDressBookTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -603,19 +628,22 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressbook.app/AppDressbook";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressBook.app/AppDressBook";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38B18C522C4390631B5F1C92 /* Pods-AppDressbookTests.release.xcconfig */;
+			baseConfigurationReference = 4107364876B8FC4F6BFD80F4 /* Pods-AppDressBookTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = V5FP23YC74;
-				INFOPLIST_FILE = AppDressbookTests/Info.plist;
+				INFOPLIST_FILE = AppDressBookTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -625,19 +653,24 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressbook.app/AppDressbook";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressBook.app/AppDressBook";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC12BC68F481C8BADE5B67C5 /* Pods-AppDressbook.debug.xcconfig */;
+			baseConfigurationReference = 898F4EC4618599F614D59CE4 /* Pods-AppDressBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppDressBook/AppDressBook.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = V5FP23YC74;
-				INFOPLIST_FILE = AppDressbook/Info.plist;
+				INFOPLIST_FILE = AppDressBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = (
@@ -645,20 +678,24 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.appdressbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.AppDressbook;
 				PRODUCT_NAME = AppDressBook;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AED21BE5DFA447690451A82C /* Pods-AppDressbook.release.xcconfig */;
+			baseConfigurationReference = A686ADCFAA618DC206AD7E08 /* Pods-AppDressBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppDressBook/AppDressBook.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V5FP23YC74;
-				INFOPLIST_FILE = AppDressbook/Info.plist;
+				INFOPLIST_FILE = AppDressBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = (
@@ -666,15 +703,16 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.appdressbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.AppDressbook;
 				PRODUCT_NAME = AppDressBook;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EABA0227A7E950EF406718D /* Pods-AppDressbook-tvOS.debug.xcconfig */;
+			baseConfigurationReference = EA1C6108F658B6DE3642723C /* Pods-AppDressBook-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -687,14 +725,14 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AppDressbook-tvOS/Info.plist";
+				INFOPLIST_FILE = "AppDressBook-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AppDressbook-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidegironi.appdressbook-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -705,7 +743,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7A8E0868E261E29C3E3A81C /* Pods-AppDressbook-tvOS.release.xcconfig */;
+			baseConfigurationReference = 141A7B1A019FAB23A91F553B /* Pods-AppDressBook-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -718,14 +756,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AppDressbook-tvOS/Info.plist";
+				INFOPLIST_FILE = "AppDressBook-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AppDressbook-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidegironi.appdressbook-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -736,7 +774,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3297C61DDE05495C06FD9679 /* Pods-AppDressbook-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = C14A504E14ABEF36BF82B335 /* Pods-AppDressBook-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -748,25 +786,25 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AppDressbook-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "AppDressBook-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AppDressbook-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AppDressBook-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressbook-tvOS.app/AppDressbook-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressBook-tvOS.app/AppDressBook-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEBCE36AB4A783A26C33014D /* Pods-AppDressbook-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 24519B1AF99900D92F490D6C /* Pods-AppDressBook-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -778,18 +816,18 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AppDressbook-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "AppDressBook-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AppDressbook-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AppDressBook-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressbook-tvOS.app/AppDressbook-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDressBook-tvOS.app/AppDressBook-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -932,7 +970,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AppDressbook" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AppDressBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

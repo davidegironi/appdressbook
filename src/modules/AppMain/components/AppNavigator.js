@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native';
+import NetInfo from '@react-native-community/netinfo';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -56,7 +57,13 @@ export default function AppNavigator() {
       && settings != null
       && settings.needslogin
       && auth.authtoken != null) {
-      AuthHelper.refreshLoginToken(settings.apiuri, auth.authtoken);
+      NetInfo.fetch()
+        .then((netInfo) => {
+          if (netInfo.isConnected && netInfo.isInternetReachable) {
+            AuthHelper.refreshLoginToken(settings.apiuri, auth.authtoken);
+          }
+        })
+        .catch(() => null);
     }
   }, []);
 

@@ -60,7 +60,9 @@ export default function AppMain() {
 
   // effects
   useEffect(() => {
-    if (settings != null && auth == null) AuthHelper.loadAuth(dispatch);
+    if (settings != null && auth == null) {
+      AuthHelper.loadAuth(dispatch);
+    }
   }, [settings, auth]);
 
   // effects
@@ -70,7 +72,7 @@ export default function AppMain() {
         SettingsHelper.loadSettings(dispatch)
           .then((getsettings) => {
             if (!getsettings.apiuriloaded) {
-              ApiConfigHelper.setApiuri(dispatch, Config.apiuri)
+              ApiConfigHelper.setApiuri(dispatch, Config.apiuri, null)
                 .catch((err) => {
                   ToastHelper.showAlertMessage(`${I18n.t('appmain.errorloadingsettings')} ${err}`);
                 });
