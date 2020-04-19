@@ -41,19 +41,19 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* AppDressbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDressbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* AppDressBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDressBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AppDressbookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDressbookTests.m; sourceTree = "<group>"; };
 		01F4BFC3CFDD7B830773709C /* libPods-AppDressbook-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressbook-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* AppDressbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDressbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* AppDressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDressbook/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDressbook/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AppDressbook/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AppDressbook/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AppDressbook/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* AppDressbook-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppDressbook-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* AppDressbook-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppDressbook-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* AppDressBook-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppDressBook-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* AppDressBook-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppDressBook-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3297C61DDE05495C06FD9679 /* Pods-AppDressbook-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbook-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AppDressbook-tvOSTests/Pods-AppDressbook-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38B18C522C4390631B5F1C92 /* Pods-AppDressbookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDressbookTests.release.xcconfig"; path = "Target Support Files/Pods-AppDressbookTests/Pods-AppDressbookTests.release.xcconfig"; sourceTree = "<group>"; };
 		57B7DDD3DDBC0B6E231E68E1 /* libPods-AppDressbook-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDressbook-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,10 +174,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* AppDressbook.app */,
-				00E356EE1AD99517003FC87E /* AppDressbookTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* AppDressbook-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* AppDressbook-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* AppDressBook.app */,
+				00E356EE1AD99517003FC87E /* AppDressBookTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* AppDressBook-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* AppDressBook-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AppDressbookTests */ = {
+		00E356ED1AD99517003FC87E /* AppDressBookTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppDressbookTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppDressBookTests" */;
 			buildPhases = (
 				B9433ADEBC9BB5E44E35ABD8 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -214,14 +214,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AppDressbookTests;
+			name = AppDressBookTests;
 			productName = AppDressbookTests;
-			productReference = 00E356EE1AD99517003FC87E /* AppDressbookTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* AppDressBookTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* AppDressbook */ = {
+		13B07F861A680F5B00A75B9A /* AppDressBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AppDressbook" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AppDressBook" */;
 			buildPhases = (
 				E63CCED9AC00AF9309C7043B /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -234,14 +234,14 @@
 			);
 			dependencies = (
 			);
-			name = AppDressbook;
+			name = AppDressBook;
 			productName = AppDressbook;
-			productReference = 13B07F961A680F5B00A75B9A /* AppDressbook.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* AppDressBook.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* AppDressbook-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* AppDressBook-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressbook-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressBook-tvOS" */;
 			buildPhases = (
 				3466726E56309920EFBBF53E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -254,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = "AppDressbook-tvOS";
+			name = "AppDressBook-tvOS";
 			productName = "AppDressbook-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* AppDressbook-tvOS.app */;
+			productReference = 2D02E47B1E0B4A5D006451C7 /* AppDressBook-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* AppDressbook-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* AppDressBook-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressbook-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressBook-tvOSTests" */;
 			buildPhases = (
 				CC5D9E7F8CBBB30E0A0CD54B /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -273,9 +273,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "AppDressbook-tvOSTests";
+			name = "AppDressBook-tvOSTests";
 			productName = "AppDressbook-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* AppDressbook-tvOSTests.xctest */;
+			productReference = 2D02E4901E0B4A5D006451C7 /* AppDressBook-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -320,10 +320,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* AppDressbook */,
-				00E356ED1AD99517003FC87E /* AppDressbookTests */,
-				2D02E47A1E0B4A5D006451C7 /* AppDressbook-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* AppDressbook-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* AppDressBook */,
+				00E356ED1AD99517003FC87E /* AppDressBookTests */,
+				2D02E47A1E0B4A5D006451C7 /* AppDressBook-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* AppDressBook-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -559,12 +559,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* AppDressbook */;
+			target = 13B07F861A680F5B00A75B9A /* AppDressBook */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* AppDressbook-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* AppDressBook-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -645,8 +645,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.AppDressbook;
-				PRODUCT_NAME = AppDressbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.appdressbook;
+				PRODUCT_NAME = AppDressBook;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -666,8 +666,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.AppDressbook;
-				PRODUCT_NAME = AppDressbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidegironi.appdressbook;
+				PRODUCT_NAME = AppDressBook;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -896,7 +896,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppDressbookTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppDressBookTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -905,7 +905,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AppDressbook" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AppDressBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -914,7 +914,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressbook-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressBook-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -923,7 +923,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressbook-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AppDressBook-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
