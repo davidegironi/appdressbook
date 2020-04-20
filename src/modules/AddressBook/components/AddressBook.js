@@ -105,6 +105,7 @@ const AddressBookList = React.memo((props) => {
           sections={contactsData}
           keyExtractor={(item) => item.id}
           ref={contactslistRef}
+          stickySectionHeadersEnabled
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.addressbooklistsectionview}>
               <Text style={styles.addressbooklistsectiontext}>
@@ -320,6 +321,58 @@ export default function AddressBook() {
   const windowWidth = useWindowDimensions().width;
   const latestcontactsmaxitems = Math.floor(windowWidth / latestcontactsWidth);
 
+  /**
+   * upsert contacts
+   * @param {boolean} forced
+   */
+  function doUpsertcontacts(forced, timeout) {
+    // get contacts
+    NetInfo.fetch()
+      .then((netInfo) => {
+        const isonline = netInfo == null
+          ? true
+          : netInfo.isConnected && netInfo.isInternetReachable;
+        if (
+          (settings.getcontactsrefresh && settings.getcontactsrefreshwifi && netInfo.type === 'wifi')
+          || (settings.getcontactsrefresh && netInfo.type !== 'none')
+          || forced
+        ) {
+          AddressBookHelper.upsertContacts(
+            isonline, settings.apiuri, authtoken, timeout
+          )
+            .then((getcontacts) => {
+              if (getcontacts.errors != null) {
+                setContacts([]);
+                ToastHelper.showAlertMessage(getcontacts.errors);
+              } else {
+                setContacts(getcontacts.contacts);
+                // refresh latest contacts
+                AddressBookHelper.refreshLatestcontacts(
+                  getcontacts.contacts,
+                  latestcontactsmaxitems
+                )
+                  .then((latestcontactsnew) => {
+                    if (latestcontactsnew != null) {
+                      setLatestcontacts(latestcontactsnew.latestcontacts);
+                    }
+                  })
+                  .catch(() => {
+                    ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadinglatestcontacts'));
+                  });
+              }
+            })
+            .catch(() => {
+              setContacts([]);
+              ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadingcontacts'));
+            });
+        }
+      })
+      .catch(() => {
+        setContacts([]);
+        ToastHelper.showAlertMessage(I18n.t('addressbook.errornetwork'));
+      });
+  }
+
   // effects
   useEffect(() => {
     let mounted = true;
@@ -332,89 +385,15 @@ export default function AddressBook() {
     },
     Config.loadingTimeThreshold);
 
-    // get contacts
-    NetInfo.fetch()
-      .then((netInfo) => {
-        const isonline = netInfo == null
-          ? true
-          : netInfo.isConnected && netInfo.isInternetReachable;
-        AddressBookHelper.upsertContacts(
-          isonline, settings.apiuri, authtoken, upsertContactsTimeoutfirst
-        )
-          .then((getcontacts) => {
-            if (getcontacts.errors != null) {
-              setContacts([]);
-              ToastHelper.showAlertMessage(getcontacts.errors);
-            } else if (mounted) {
-              setContacts(getcontacts.contacts);
-              // refresh latest contacts
-              AddressBookHelper.refreshLatestcontacts(
-                getcontacts.contacts,
-                latestcontactsmaxitems
-              )
-                .then((latestcontactsnew) => {
-                  if (latestcontactsnew != null) {
-                    setLatestcontacts(latestcontactsnew.latestcontacts);
-                  }
-                })
-                .catch(() => {
-                  ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadinglatestcontacts'));
-                });
-            } else {
-              setContacts([]);
-            }
-          })
-          .catch(() => {
-            setContacts([]);
-            ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadingcontacts'));
-          });
-      })
-      .catch(() => {
-        setContacts([]);
-        ToastHelper.showAlertMessage(I18n.t('addressbook.errornetwork'));
-      });
+    // upsert contacts first time
+    doUpsertcontacts(true, upsertContactsTimeoutfirst);
 
     // refresh contacts
     let refreshlastdate = new Date().getTime();
     const refreshtimeoutTimer = setInterval(() => {
       const now = new Date().getTime();
       if ((now - refreshlastdate) / 1000 > Config.getcontactsrefreshseconds) {
-        if (mounted) {
-          // refresh if time is passed
-          NetInfo.fetch().then((netInfo) => {
-            if (netInfo.isConnected && netInfo.isInternetReachable) {
-              if (
-                (settings.getcontactsrefresh && settings.getcontactsrefreshwifi && netInfo.type === 'wifi')
-                    || (settings.getcontactsrefresh && netInfo.type !== 'none')
-              ) {
-                AddressBookHelper.upsertContacts(
-                  true, settings.apiuri, authtoken, upsertContactsTimeout
-                )
-                  .then((getcontacts) => {
-                    if (getcontacts.errors != null) {
-                      ToastHelper.showAlertMessage(getcontacts.errors);
-                    } else if (mounted) {
-                      setContacts(getcontacts.contacts);
-                      // refresh latest contacts
-                      AddressBookHelper.refreshLatestcontacts(
-                        getcontacts.contacts,
-                        latestcontactsmaxitems
-                      )
-                        .then((latestcontactsnew) => {
-                          if (latestcontactsnew != null && latestcontactsnew.changed) {
-                            setLatestcontacts(latestcontactsnew.latestcontacts);
-                          }
-                        })
-                        .catch(() => null);
-                    }
-                  })
-                  .catch(() => {
-                    ToastHelper.showAlertMessage(I18n.t('addressbook.errorloadingcontacts'));
-                  });
-              }
-            }
-          });
-        }
+        if (mounted) doUpsertcontacts(false, upsertContactsTimeout);
         refreshlastdate = new Date().getTime();
       }
     }, 1000);
@@ -492,22 +471,20 @@ export default function AddressBook() {
     );
   }
 
-  // loader indicator
-  if (contacts.length === 0) {
+  // no contet
+  if (contacts.length === 0
+      || (contactsData != null
+       && contactsData.length === 0 && (searchtext == null || searchtext.length === 0))) {
     return (
       <View style={styles.containerempty}>
         <Text style={styles.textempty}>{I18n.t('addressbook.nocontent')}</Text>
-      </View>
-    );
-  }
-
-  // no contet
-  if (contactsData.length === 0 && (searchtext == null || searchtext.length === 0)) {
-    return (
-      <View style={styles.containerempty}>
-        <Text style={styles.textempty}>
-          {I18n.t('addressbook.nocontent')}
-        </Text>
+        <TouchableHighlight
+          underlayColor={theme.COLOR_ADDRESSBOOKRELOADPRESS}
+          style={styles.touchforceupsert}
+          onPress={() => doUpsertcontacts(true, upsertContactsTimeout)}
+        >
+          <Text style={styles.textforceupsert}>{I18n.t('addressbook.taptoreload')}</Text>
+        </TouchableHighlight>
       </View>
     );
   }
@@ -717,5 +694,10 @@ const styles = StyleSheet.create({
   textempty: {
     textAlign: 'center',
     fontSize: 18
-  }
+  },
+  textforceupsert: {
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
 });

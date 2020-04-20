@@ -12,7 +12,7 @@ export default {
       apiuriplaceholder: 'appdressbookapisample.herokuapp.com/api',
       apiurlchangetitle: 'Reset url',
       apiurlchangemessage: 'Do you want to change the api url, all your settings will be deleted?',
-      loading: 'retring settings from server...',
+      loading: 'retriving settings from server...',
       seterrorempty: 'Api url can not be empty',
       seterrorinvalidurl: 'Invalid api url format',
       cleansettingserrors: 'Error cleaning settings',

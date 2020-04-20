@@ -11,6 +11,7 @@ export default {
       nocontent: 'No contact loaded',
       nocontentfound: 'No result for',
       loading: 'loading contacts...',
+      taptoreload: 'TAP here to reload',
       errorloadingcontacts: 'Error loading contacts',
       errorloadinglatestcontacts: 'Error loading latest contacts',
       errorunknown: 'Unknown error happened',
