@@ -10,7 +10,7 @@ export default {
       title: 'AppDress Book',
       subtitle: 'An address book app',
       version: 'version: ',
-      text: 'AppDress Book is a React Native application that implements an Address Book for companies.',
+      text: 'Address Book is and app that synchronize contacts using a custom API server.',
       link: 'https://github.com/davidegironi/appdressbook',
       linklink: 'https://github.com/davidegironi/appdressbook',
       copyright: 'Copyright (c) Davide Gironi, 2018',

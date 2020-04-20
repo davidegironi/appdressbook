@@ -1,6 +1,6 @@
 {
   "name": "appdressbook",
-  "description": "An application that displays a contact list",
+  "description": "App that synchronize contacts using a custom API server",
   "version": "1.0.1",
   "author": {
     "name": "Davide Gironi"
