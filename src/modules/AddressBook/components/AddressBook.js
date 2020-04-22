@@ -44,9 +44,9 @@ const imageSearch = require('../../../images/search.png');
 const imageClear = require('../../../images/clear.png');
 
 // set timeout for the first load
-const upsertContactsTimeoutfirst = 30000;
-// set timeout for the next loads
-const upsertContactsTimeout = 120000;
+const upsertContactsFetchtimeoutonload = 30000;
+// set timeout for timed upserts
+const upsertContactsFetchtimeout = 120000;
 
 // set contact styles
 const contactHeight = 50;
@@ -385,15 +385,23 @@ export default function AddressBook() {
     },
     Config.loadingTimeThreshold);
 
-    // upsert contacts first time
-    doUpsertcontacts(true, upsertContactsTimeoutfirst);
+    // get contacts from local storage
+    AddressBookHelper.getContactsStorage()
+      .then((getcontacts) => {
+        if (getcontacts != null) {
+          setContacts(getcontacts.contacts);
+        } else {
+          doUpsertcontacts(true, upsertContactsFetchtimeoutonload);
+        }
+      })
+      .catch(() => setContacts([]));
 
     // refresh contacts
     let refreshlastdate = new Date().getTime();
     const refreshtimeoutTimer = setInterval(() => {
       const now = new Date().getTime();
       if ((now - refreshlastdate) / 1000 > Config.getcontactsrefreshseconds) {
-        if (mounted) doUpsertcontacts(false, upsertContactsTimeout);
+        if (mounted) doUpsertcontacts(false, upsertContactsFetchtimeout);
         refreshlastdate = new Date().getTime();
       }
     }, 1000);
@@ -481,7 +489,7 @@ export default function AddressBook() {
         <TouchableHighlight
           underlayColor={theme.COLOR_ADDRESSBOOKRELOADPRESS}
           style={styles.touchforceupsert}
-          onPress={() => doUpsertcontacts(true, upsertContactsTimeout)}
+          onPress={() => doUpsertcontacts(true, upsertContactsFetchtimeout)}
         >
           <Text style={styles.textforceupsert}>{I18n.t('addressbook.taptoreload')}</Text>
         </TouchableHighlight>
