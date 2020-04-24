@@ -10,10 +10,10 @@ AppDressBook is Open Source, and it's built using [React Native](https://reactna
 * **App Store** I don't have an Apple Developer Account, donations are welcome.
 
 ## Screenshot
-![Contacts List (v1.0.1)](screenshots/ios_contactslist_small.png)
-![Contact (v1.0.1)](screenshots/ios_contact_small.png)
-![Login (v1.0.1)](screenshots/ios_login_small.png)
-![Settings (v1.0.1)](screenshots/ios_settings_small.png)
+![Contact List](screenshots/small/ios_contactlist.png)
+![Contact](screenshots/small/ios_contact.png)
+![Login](screenshots/small/ios_login.png)
+![Settings](screenshots/small/ios_settings.png)
 
 ## RESTful API server
 The specification documents to build a **RESTful API server** that works with this application can be found in the "docs/API docs" folder.

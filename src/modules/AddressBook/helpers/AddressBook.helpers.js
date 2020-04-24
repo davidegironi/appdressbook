@@ -156,11 +156,18 @@ module.exports = {
    * @param {string} authtoken
    */
   async upsertContacts(isonline, apiuri, authtoken) {
-    // capitalize first letter
-    const capitalizeFirstLetter = (string) => (
-      string != null
-        ? string.toLowerCase().charAt(0).toUpperCase() + string.toLowerCase().slice(1)
-        : null);
+    // capitalize first letter of each word
+    const capitalizeFirstLetter = (str) => {
+      if (str !== null) {
+        const splitstr = str.toLowerCase().split(' ');
+        for (let i = 0; i < splitstr.length; i += 1) {
+          splitstr[i] = splitstr[i].charAt(0).toUpperCase() + splitstr[i].substring(1);
+        }
+        return splitstr.join(' ');
+      }
+      return null;
+    };
+
     // get from storage
     return module.exports.getContactsStorage()
       .then((contacts) => {
@@ -225,7 +232,7 @@ module.exports = {
                             // get name
                             const firstname = capitalizeFirstLetter(person.firstname != null && person.firstname.length > 0 ? person.firstname : '_');
                             const lastname = capitalizeFirstLetter(person.lastname != null && person.lastname.length > 0 ? person.lastname : '_');
-                            const name = `${firstname} ${lastname}`;
+                            const name = `${lastname} ${firstname}`;
                             const namepointed = `${firstname[0]}. ${lastname}`;
                             // get shortname
                             const shortname = `${firstname[0]} ${lastname[0]}`.toUpperCase();
@@ -358,6 +365,16 @@ module.exports = {
                             });
                           });
                         }
+                        // sort contacts
+                        contactsret.sort((a, b) => {
+                          if (a.lastname > b.lastname) return 1;
+                          if (a.lastname === b.lastname) {
+                            if (a.fistname > b.firstname) return 1;
+                            return -1;
+                          }
+                          return -1;
+                        });
+                        // build return
                         const newcontacts = {
                           contacts: contactsret,
                           hash: responsedata.hash

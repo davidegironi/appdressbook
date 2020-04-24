@@ -9,7 +9,8 @@ import {
   SafeAreaView,
   SectionList,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Switch
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -28,8 +29,6 @@ import ToastHelper from '../../AppMain/helpers/Toast.helpers';
 import SettingsHelper from '../helpers/Settings.helpers';
 
 // load images
-const imageToggleOn = require('../../../images/toggle_on.png');
-const imageToggleOff = require('../../../images/toggle_off.png');
 const imageKeyboardArrowRight = require('../../../images/keyboard_arrow_right.png');
 
 /**
@@ -55,16 +54,20 @@ export default function Settings() {
             style={StyleSheet.flatten([styles.settingsbutton, { flexDirection: 'row' }])}
           >
             <Text
-              style={StyleSheet.flatten([styles.settingstext, { flex: 0.9 }])}
+              style={StyleSheet.flatten([styles.settingstext, { flex: 1 }])}
             >
               {text}
             </Text>
-            <TouchableOpacity onPress={onPress}>
-              <Image
-                source={value ? imageToggleOn : imageToggleOff}
-                style={StyleSheet.flatten([styles.settingsimagetoggleright, { flex: 0.1 }])}
-              />
-            </TouchableOpacity>
+            <Switch
+              thumbColor={value ? theme.COLOR_SETTINGSSWITCHON : theme.COLOR_SETTINGSSWITCHOFF}
+              trackColor={{
+                true: theme.COLOR_SETTINGSSWITCHONBACK,
+                false: theme.COLOR_SETTINGSSWITCHOFFBACK
+              }}
+              onValueChange={onPress}
+              value={value}
+              style={styles.settingsswitchright}
+            />
           </View>
         );
         break;
@@ -75,13 +78,13 @@ export default function Settings() {
             onPress={onPress}
           >
             <Text
-              style={StyleSheet.flatten([styles.settingstext, { flex: 0.9 }])}
+              style={StyleSheet.flatten([styles.settingstext, { flex: 1 }])}
             >
               {text}
             </Text>
             <Image
               source={imageKeyboardArrowRight}
-              style={StyleSheet.flatten([styles.settingsimageright, { flex: 0.1 }])}
+              style={styles.settingsimageright}
             />
           </TouchableOpacity>
         );
@@ -268,17 +271,14 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   settingsimageright: {
-    padding: 10,
+    marginRight: 15,
     margin: 5,
     height: 25,
     width: 25,
     resizeMode: 'contain'
   },
-  settingsimagetoggleright: {
-    padding: 0,
-    margin: 0,
-    height: 35,
-    width: 35,
-    resizeMode: 'contain'
+  settingsswitchright: {
+    marginRight: 15,
+    transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }]
   }
 });

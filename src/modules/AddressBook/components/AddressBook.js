@@ -329,9 +329,9 @@ export default function AddressBook() {
     // get contacts
     NetInfo.fetch()
       .then((netInfo) => {
-        const isonline = netInfo == null
+        const isonline = (netInfo.isInternetReachable === null
           ? true
-          : netInfo.isConnected && netInfo.isInternetReachable;
+          : netInfo.isConnected && netInfo.isInternetReachable);
         if (
           (settings.getcontactsrefresh && settings.getcontactsrefreshwifi && netInfo.type === 'wifi')
           || (settings.getcontactsrefresh && netInfo.type !== 'none')
@@ -390,11 +390,24 @@ export default function AddressBook() {
       .then((getcontacts) => {
         if (getcontacts != null) {
           setContacts(getcontacts.contacts);
+          // refresh latest contacts
+          AddressBookHelper.refreshLatestcontacts(
+            getcontacts.contacts,
+            latestcontactsmaxitems
+          )
+            .then((latestcontactsnew) => {
+              if (latestcontactsnew != null) {
+                setLatestcontacts(latestcontactsnew.latestcontacts);
+              }
+            })
+            .catch(() => null);
         } else {
           doUpsertcontacts(true, upsertContactsFetchtimeoutonload);
         }
       })
-      .catch(() => setContacts([]));
+      .catch(() => {
+        setContacts([]);
+      });
 
     // refresh contacts
     let refreshlastdate = new Date().getTime();
