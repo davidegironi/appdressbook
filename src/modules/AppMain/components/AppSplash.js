@@ -42,9 +42,11 @@ export default function AppSplash() {
 
   return (
     <View style={styles.container}>
-      {loadingtimethresholdgone
-        ? <Text style={styles.loading}>{I18n.t('appsplash.loading')}</Text>
-        : null}
+      <Text style={styles.loading}>
+        { loadingtimethresholdgone
+          ? I18n.t('appsplash.loading')
+          : ' ' }
+      </Text>
       <ActivityIndicator />
       <StatusBar barStyle="default" />
     </View>

@@ -466,7 +466,7 @@ module.exports = {
   /**
    * find the inversion color for an hex color
    * @param {string} hex
-   * @param {boolena, blackandwhite
+   * @param {boolen, blackandwhite
    */
   invertColor(hex, blackandwhite) {
     let h = hex;

@@ -138,8 +138,8 @@ const AddressBookList = React.memo((props) => {
                 >
                   <View style={styles.addressbooklistcontactshortname}>
                     <View
-                      style={StyleSheet.flatten([styles.addressbooklistcontactshortnamecircle,
-                        { backgroundColor: color }])}
+                      style={[styles.addressbooklistcontactshortnamecircle,
+                        { backgroundColor: color }]}
                     />
                   </View>
                   <View style={styles.addressbooklistcontactview}>
@@ -154,23 +154,14 @@ const AddressBookList = React.memo((props) => {
                           {locationcode != null
                             ? (
                               <View
-                                style={StyleSheet.flatten(
-                                  [styles.addressbooklistcontactviewlocationcode,
-                                    {
-                                      backgroundColor: locationcolor
-                                    }
-                                  ]
-                                )}
+                                style={[styles.addressbooklistcontactviewlocationcode,
+                                  { backgroundColor: locationcolor }
+                                ]}
                               >
                                 <Text
                                   numberOfLines={1}
-                                  style={StyleSheet.flatten(
-                                    [styles.addressbooklistcontacttextlocationcode,
-                                      {
-                                        color: locationcolorinvert
-                                      }
-                                    ]
-                                  )}
+                                  style={[styles.addressbooklistcontacttextlocationcode,
+                                    { color: locationcolorinvert }]}
                                 >
                                   {locationcode}
                                 </Text>
@@ -233,11 +224,11 @@ const LatestContacts = React.memo((props) => {
       >
         <View style={styles.latestcontactsitem}>
           <View
-            style={StyleSheet.flatten([styles.latestcontactsitemshortnamecircle,
-              { backgroundColor: contact.color }])}
+            style={[styles.latestcontactsitemshortnamecircle,
+              { backgroundColor: contact.color }]}
           >
-            <Text style={StyleSheet.flatten([styles.latestcontactsitemshortname,
-              { color: contact.colorinvert }])}
+            <Text style={[styles.latestcontactsitemshortname,
+              { color: contact.colorinvert }]}
             >
               {contact.shortname}
             </Text>

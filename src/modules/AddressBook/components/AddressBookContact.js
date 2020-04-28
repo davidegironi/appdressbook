@@ -191,11 +191,11 @@ export default function AddressBookContact() {
   return (
     <View style={styles.container}>
 
-      <View style={StyleSheet.flatten([styles.viewheader, { backgroundColor: contact.color }])}>
+      <View style={[styles.viewheader, { backgroundColor: contact.color }]}>
         <View style={styles.viewheadercontent}>
           <Text
             numberOfLines={1}
-            style={StyleSheet.flatten([styles.textname, { color: contact.colorinvert }])}
+            style={[styles.textname, { color: contact.colorinvert }]}
           >
             {contact.name}
           </Text>
@@ -208,8 +208,7 @@ export default function AddressBookContact() {
           || contact.roleinfo != null
             ? (
               <View
-                style={StyleSheet.flatten([styles.viewsubheader,
-                  { backgroundColor: contact.coloropacity }])}
+                style={[styles.viewsubheader, { backgroundColor: contact.coloropacity }]}
               >
                 {contact.locationcode != null || contact.locationname != null
                   ? (

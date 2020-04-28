@@ -50,12 +50,8 @@ export default function Settings() {
     switch (type) {
       case 'switch':
         ret = (
-          <View
-            style={StyleSheet.flatten([styles.settingsbutton, { flexDirection: 'row' }])}
-          >
-            <Text
-              style={StyleSheet.flatten([styles.settingstext, { flex: 1 }])}
-            >
+          <View style={styles.settingsbutton}>
+            <Text style={[styles.settingstext, { flex: 1 }]}>
               {text}
             </Text>
             <Switch
@@ -74,12 +70,10 @@ export default function Settings() {
       case 'button':
         ret = (
           <TouchableOpacity
-            style={StyleSheet.flatten([styles.settingsbutton, { flexDirection: 'row' }])}
+            style={styles.settingsbutton}
             onPress={onPress}
           >
-            <Text
-              style={StyleSheet.flatten([styles.settingstext, { flex: 1 }])}
-            >
+            <Text style={[styles.settingstext, { flex: 1 }]}>
               {text}
             </Text>
             <Image
@@ -262,6 +256,9 @@ const styles = StyleSheet.create({
   },
   settingsheadertext: {
     fontSize: 18,
+  },
+  settingsbutton: {
+    flexDirection: 'row'
   },
   settingstext: {
     margin: 0,
