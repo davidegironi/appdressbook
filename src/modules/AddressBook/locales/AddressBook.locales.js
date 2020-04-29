@@ -9,7 +9,7 @@ export default {
     addressbook: {
       searchinputplaceholder: 'search',
       nocontent: 'No contact loaded',
-      nocontentfound: 'No result for',
+      nocontentfound: 'No results found for',
       loading: 'loading contacts...',
       taptoreload: 'TAP here to reload',
       errorloadingcontacts: 'Error loading contacts',

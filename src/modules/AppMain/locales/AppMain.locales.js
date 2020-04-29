@@ -13,7 +13,6 @@ export default {
       loading: 'loading...'
     },
     appnavigator: {
-      main: 'Address Book',
       login: 'Please login',
       apiconfig: 'Api Config',
       settings: 'Settings',

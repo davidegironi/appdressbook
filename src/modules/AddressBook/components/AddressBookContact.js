@@ -22,7 +22,7 @@ import I18n from '../../../locales/locales';
 import ToastHelper from '../../AppMain/helpers/Toast.helpers';
 
 // load images
-const imageCallMade = require('../../../images/call_made.png');
+const imageCallmade = require('../../../images/callmade.png');
 const imageEmail = require('../../../images/email.png');
 const imagePhone = require('../../../images/phone.png');
 const imageMessage = require('../../../images/message.png');
@@ -177,7 +177,7 @@ export default function AddressBookContact() {
           {url.openable
             ? (
               <Image
-                source={imageCallMade}
+                source={imageCallmade}
                 style={styles.viewcontactactionimage}
               />
             )

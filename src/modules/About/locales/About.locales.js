@@ -7,10 +7,10 @@
 export default {
   en: {
     about: {
-      title: 'AppDress Book',
+      title: 'AppDressBook',
       subtitle: 'An address book app',
       version: 'version: ',
-      text: 'Address Book is and app that synchronizes contacts using a custom API server.',
+      text: 'AppDressBook is and app that synchronizes contacts using a custom API server.',
       link: 'https://github.com/davidegironi/appdressbook',
       linklink: 'https://github.com/davidegironi/appdressbook',
       copyright: 'Copyright (c) Davide Gironi, 2018',

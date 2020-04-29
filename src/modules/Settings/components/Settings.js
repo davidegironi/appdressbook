@@ -29,7 +29,7 @@ import ToastHelper from '../../AppMain/helpers/Toast.helpers';
 import SettingsHelper from '../helpers/Settings.helpers';
 
 // load images
-const imageKeyboardArrowRight = require('../../../images/keyboard_arrow_right.png');
+const imageRightarrow = require('../../../images/rightarrow.png');
 
 /**
  * component
@@ -51,7 +51,7 @@ export default function Settings() {
       case 'switch':
         ret = (
           <View style={styles.settingsbutton}>
-            <Text style={[styles.settingstext, { flex: 1 }]}>
+            <Text style={styles.settingstext}>
               {text}
             </Text>
             <Switch
@@ -73,11 +73,11 @@ export default function Settings() {
             style={styles.settingsbutton}
             onPress={onPress}
           >
-            <Text style={[styles.settingstext, { flex: 1 }]}>
+            <Text style={styles.settingstext}>
               {text}
             </Text>
             <Image
-              source={imageKeyboardArrowRight}
+              source={imageRightarrow}
               style={styles.settingsimageright}
             />
           </TouchableOpacity>
@@ -261,10 +261,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   settingstext: {
+    flex: 1,
     margin: 0,
     paddingLeft: 10,
     paddingTop: 8,
-    paddingBottom: 6,
+    paddingBottom: 8,
     fontSize: 16
   },
   settingsimageright: {
