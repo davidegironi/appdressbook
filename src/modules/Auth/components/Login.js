@@ -43,7 +43,7 @@ export default function Login() {
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
 
-  // useEffect
+  // effects
   useEffect(() => {
     usernameRef.current.focus();
   }, []);
