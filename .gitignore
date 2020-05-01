@@ -59,9 +59,6 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-# Google
-google-services.json
-
 # Configs
 config.developement*
 config.production*
