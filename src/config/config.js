@@ -16,11 +16,11 @@ const loadingTimeThreshold = 3000;
 
 // load config
 // for custom config make a config.{process.env.NODE_ENV}.js file starting
-// from the config.debug._js file
+// from the config.template._js file
 const configdevelopment = require('./config.development.js');
 const configproduction = require('./config.production.js');
 
-// select the proper config and override secitions
+// select the proper config and override sections
 let config = null;
 if (process.env.NODE_ENV === 'development') config = configdevelopment;
 if (process.env.NODE_ENV === 'production') config = configproduction;
