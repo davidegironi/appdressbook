@@ -6,7 +6,7 @@ It is **useful for companies or associations** that's want to share contacts usi
 AppDressBook is Open Source and it's built using [React Native](https://reactnative.dev/).
 
 ## Download
-* **Play Store** ...link to come
+* **[Google Play Store](https://play.google.com/store/apps/details?id=com.davidegironi.appdressbook)**
 * **App Store** I don't have an Apple Developer Account, donations are welcome.
 
 ## Screenshot
