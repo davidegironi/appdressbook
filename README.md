@@ -11,10 +11,10 @@ AppDressBook is Open Source and it's built using [Flutter](https://flutter.dev/)
 
 ## Screenshot
 <p align="center">
-  <img src="screenshots/android_contactlist.png" width="200"/>
-  <img src="screenshots/android_contact.png" width="200"/>
-  <img src="screenshots/android_login.png" width="200"/>
-  <img src="screenshots/android_settings.png" width="200"/>
+  <img src="screenshots/android_contactlist.png" width="300"/>
+  <img src="screenshots/android_contact.png" width="300"/>
+  <img src="screenshots/android_login.png" width="300"/>
+  <img src="screenshots/android_settings.png" width="300"/>
 </p>
 
 ## RESTful API server
