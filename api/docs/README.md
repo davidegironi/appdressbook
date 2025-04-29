@@ -6,4 +6,4 @@ The authentication can be used to prevent undesired access, but it can also be s
 Server side it would be easy to build contact list based on the user permissions.  
 The API server could be implemented in several languages, it just must meets the specification above.  
 Authorization token is in JWT format.  
-Find the openapi yaml file. (openapi.yaml)
+Find the openapi yaml file [openapi.yaml](openapi.yaml).
