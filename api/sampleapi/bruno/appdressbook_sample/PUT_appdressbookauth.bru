@@ -1,0 +1,21 @@
+meta {
+  name: PUT_appdressbookauth
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:9000/api/appdressbookauth
+  body: json
+  auth: none
+}
+
+headers {
+  authtoken: _authtoken
+}
+
+body:json {
+  {
+    "expiresdays":"_expiresdays"
+  }
+}

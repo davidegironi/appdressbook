@@ -4,8 +4,5 @@
 			"path": "."
 		}
 	],
-	"settings": {
-		"eslint.alwaysShowStatus": true,
-		"java.configuration.updateBuildConfiguration": "disabled"
-	}
+	"settings": {}
 }

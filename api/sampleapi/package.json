@@ -1,0 +1,19 @@
+{
+  "name": "appdressbookapisample",
+  "description": "A sample API server for the AppDressBook app",
+  "version": "1.0.0",
+  "author": {
+    "name": "Davide Gironi"
+  },
+  "homepage": "https://github.com/davidegironi/appdressbook",
+  "license": "GPLv3",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
