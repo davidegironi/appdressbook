@@ -21,12 +21,12 @@ class LoginCubit extends Cubit<LoginState> {
   }
 
   // login
-  Future<void> login({required String url, required String email, required String password}) async {
+  Future<void> login({required String url, required String username, required String password}) async {
     // emit loading
     emit(LoginLoading());
 
     // perform the request
-    final authtoken = await authRepository.login(url: url, email: email, password: password);
+    final authtoken = await authRepository.login(url: url, username: username, password: password);
 
     // check response
     if (authtoken != null) {
@@ -43,11 +43,5 @@ class LoginCubit extends Cubit<LoginState> {
       // emit error
       emit(LoginFailure(AppI18N.instance.translate("auth.loginerror")));
     }
-  }
-
-  // try to login
-  Future<void> loginvalidate({required String email, required String password}) async {
-    emit(LoginLoading());
-    emit(LoginFailure(AppI18N.instance.translate("auth.loginvalidate")));
   }
 }

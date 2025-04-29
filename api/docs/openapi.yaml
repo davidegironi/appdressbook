@@ -1,0 +1,341 @@
+openapi: 3.0.3
+info:
+  title: Address Book API
+  description: API for managing address book contacts
+  version: 1.0.0
+servers:
+  - url: https://api.example.com
+    description: API server
+
+paths:
+  /appdressbookauth:
+    put:
+      summary: Refresh login token
+      operationId: refreshToken
+      parameters:
+        - name: authtoken
+          in: header
+          required: true
+          schema:
+            type: string
+            description: JWT authentication token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                expiresdays:
+                  type: integer
+                  description: Number of days until token expiration
+              required:
+                - expiresdays
+      responses:
+        '200':
+          description: Token refreshed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: New authentication token containing JWT with Token schema
+        '401':
+          description: Unauthorized
+
+    post:
+      summary: Login with username and password
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+              required:
+                - username
+                - password
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Authentication token containing JWT with Token schema
+        '400':
+          description: Invalid credentials
+          
+  /appdressbookconfig:
+    get:
+      summary: Get address book configuration
+      operationId: getConfiguration
+      description: Returns public configuration for the app, such as company name and terms of service.
+      responses:
+        '200':
+          description: Configuration object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  companyname:
+                    type: string
+                    nullable: true
+                    description: The name of your company
+                    default: null
+                  needslogin:
+                    type: boolean
+                    nullable: true
+                    description: Use the login to access the API
+                    default: true
+                  terms:
+                    type: string
+                    nullable: true
+                    description: Terms of use page text
+                    default: null
+                  privacy:
+                    type: string
+                    nullable: true
+                    description: Privacy page text
+                    default: null
+                required:
+                  - companyname
+                  - needslogin
+                  - terms
+                  - privacy
+                  
+  /appdressbookcontacts:
+    get:
+      summary: Get contact list (hash or full)
+      operationId: getContacts
+      description: |
+        Returns either a hash of the contact list (`mode=h`) or the full contact list (`mode=l`).
+      parameters:
+        - name: authtoken
+          in: header
+          required: true
+          schema:
+            type: string
+            description: JWT authentication token
+        - name: mode
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [h, l]
+            description: h = hash only, l = full contact list
+      responses:
+        '200':
+          description: Successful response (hash or contact list)
+          content:
+            application/json:
+              schema:
+                discriminator:
+                  propertyName: mode
+                  mapping:
+                    h: '#/components/schemas/HashResponse'
+                    l: '#/components/schemas/ContactListResponse'
+                oneOf:
+                  - $ref: '#/components/schemas/HashResponse'
+                  - $ref: '#/components/schemas/ContactListResponse'
+        '401':
+          description: Unauthorized
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token following the Token schema defined in components
+      
+  schemas:
+    HashResponse:
+      type: object
+      properties:
+        hash:
+          type: string
+          description: Hash code of the current contact list
+      required:
+        - hash
+        
+    ContactListResponse:
+      type: object
+      properties:
+        persons:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+        contacttypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContactType'
+        companytypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/CompanyType'
+        roletypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/RoleType'
+        locationtypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocationType'
+        hash:
+          type: string
+          description: Hash code of the current contact list
+      required:
+        - persons
+        - contacttypes
+        - companytypes
+        - roletypes
+        - locationtypes
+        - hash
+        
+    Person:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+        firstname:
+          type: string
+        lastname:
+          type: string
+        locationcode:
+          type: string
+          nullable: true
+        companycode:
+          type: string
+          nullable: true
+        rolecode:
+          type: string
+          nullable: true
+        contacts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+      required:
+        - id
+        - code
+        - firstname
+        - lastname
+        - contacts
+
+    Contact:
+      type: object
+      properties:
+        code:
+          type: string
+        value:
+          type: string
+      required:
+        - code
+        - value
+
+    ContactType:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        color:
+          type: string
+          nullable: true
+        type:
+          type: string
+          description: Contact type, app link openable types are [email|phone]
+      required:
+        - code
+        - name
+        - type
+
+    CompanyType:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        color:
+          type: string
+          nullable: true
+      required:
+        - code
+        - name
+
+    RoleType:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        color:
+          type: string
+          nullable: true
+      required:
+        - code
+        - name
+
+    LocationType:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        color:
+          type: string
+          nullable: true
+      required:
+        - code
+        - name
+        
+    Token:
+      type: object
+      title: "JWT token schema"
+      description: "Schema used in the JWT token"
+      properties:
+        _username:
+          type: string
+          title: "Username entered"
+        _displayname:
+          type: string
+          title: "Display name of the user"
+        exp:
+          type: integer
+          title: "Expires time, expressed in seconds or a string describing a time span zeit/ms"
+        iss:
+          type: string
+          title: "Token issuer"
+        aud:
+          type: string
+          title: "Token audience"
+        iat:
+          type: integer
+          title: "Issued at, expressed in seconds or a string describing a time span zeit/ms"
+        nbf:
+          type: integer
+          title: "Not valid before, expressed in seconds or a string describing a time span zeit/ms"
+      required:
+        - _username
+        - _displayname
+        - exp
+
+security:
+  - BearerAuth: []

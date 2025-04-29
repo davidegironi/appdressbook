@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
       SnackBarUtils.errorSnackbar(context, AppI18N.instance.translate("auth.errorurlinvalid"));
       return;
     }
-    context.read<LoginCubit>().login(url: url, email: username, password: password);
+    context.read<LoginCubit>().login(url: url, username: username, password: password);
   }
 
   @override

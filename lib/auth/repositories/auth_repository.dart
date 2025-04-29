@@ -117,13 +117,13 @@ class AuthRepository {
   }
 
   // perform a login request
-  Future<String?> login({required String url, required String email, required String password}) async {
+  Future<String?> login({required String url, required String username, required String password}) async {
     // perform the request
     DioUtilsResponse res = await DioUtils.request<String>(() async {
       // perform the request
       Response response = await dioGet.dio.post(
         "$url/api/appdressbookauth",
-        data: {"email": email, "password": password},
+        data: {"username": username, "password": password},
       );
 
       // check response

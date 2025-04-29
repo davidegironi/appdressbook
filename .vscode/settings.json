@@ -1,4 +1,14 @@
 {
     "cmake.ignoreCMakeListsMissing": true,
-    "dart.lineLength": 120
+    "dart.lineLength": 120,
+     "search.exclude": {
+        "**/android": true,
+        "**/ios": true,
+        "**/web": true,
+        "**/windows": true,        
+        "**/linux": true
+    },
+    "java.configuration.excludePaths": [
+        "**/android"
+    ]
 }
