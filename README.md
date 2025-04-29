@@ -10,12 +10,12 @@ AppDressBook is Open Source and it's built using [Flutter](https://flutter.dev/)
 * **App Store** I don't have an Apple Developer Account, donations are welcome.
 
 ## Screenshot
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+<p align="center">
   <img src="screenshots/android_contactlist.png" width="300"/>
   <img src="screenshots/android_contact.png" width="300"/>
   <img src="screenshots/android_login.png" width="300"/>
   <img src="screenshots/android_settings.png" width="300"/>
-</div>
+</p>
 
 ## RESTful API server
 The specification documents to build a **RESTful API server** that works with this application can be found in the api docs folder.  
