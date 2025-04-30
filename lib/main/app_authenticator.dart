@@ -5,6 +5,7 @@ library;
 
 import 'dart:convert';
 
+import 'package:appdressbook/auth/bloc/auth_bloc.dart';
 import 'package:appdressbook/auth/repositories/auth_repository.dart';
 import 'package:appdressbook/auth/screen/login_screen.dart';
 import 'package:appdressbook/config/prefskeys.dart';
@@ -15,6 +16,7 @@ import 'package:appdressbook/api/entities/appdressbookconfig.dart';
 import 'package:appdressbook/utils/snackbar_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'app_localization.dart';
 
@@ -68,12 +70,12 @@ class AppAuthenticator {
     } else {
       // show error messages
       if (context.mounted) {
-        if (!authenticated) {
-          SnackBarUtils.errorSnackbar(context, AppI18N.instance.translate("app.cannotauthenticate"));
-        }
+        SnackBarUtils.errorSnackbar(context, AppI18N.instance.translate("app.cannotauthenticate"));
       }
-      // guest page
-      navigatorState?.pushNamedAndRemoveUntil(LoginScreen.routeName, (route) => false);
+      // logout
+      if (context.mounted) {
+        context.read<AuthBloc>().add(AuthLogoutRequested());
+      }
     }
   }
 

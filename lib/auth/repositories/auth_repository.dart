@@ -87,15 +87,10 @@ class AuthRepository {
     // unset token
     authtoken = null;
     await configRepository.prefs.remove(PrefsKeys.authToken.toString());
-    // record sandbox status
-
-    String? sandbox = configRepository.prefs.getString(PrefsKeys.sandBox.toString());
     // fully erase storage
     await configRepository.prefs.clear();
     // save the apiurl, cause it was valid
     configRepository.prefs.setString(PrefsKeys.apiUrl.toString(), configRepository.config.apiUrl);
-    // restore sandbox status
-    configRepository.prefs.setString(PrefsKeys.sandBox.toString(), sandbox!);
   }
 
   // set authenticated

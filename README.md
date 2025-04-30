@@ -19,7 +19,7 @@ AppDressBook is Open Source and it's built using [Flutter](https://flutter.dev/)
 
 ## RESTful API server
 The specification documents to build a **RESTful API server** that works with this application can be found in the api docs folder.  
-Furthermore a sample application is available at address: https://appdressbookapisample.onrender.com/
+A sample API server application is available at address: https://appdressbookapisample.onrender.com/ (please consider some fails loading this address cause it's a free tier service).
 
 ## Development
 

@@ -3,11 +3,9 @@
 /// Please refer to LICENSE file for licensing information
 library;
 
-import 'package:appdressbook/config/prefskeys.dart';
 import 'package:appdressbook/main/app.dart';
 import 'package:appdressbook/auth/repositories/auth_repository.dart';
 import 'package:appdressbook/config/config_repository.dart';
-import 'package:appdressbook/utils/sandbox_banner.dart';
 import 'package:appdressbook/utils/dio_get.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -25,18 +23,9 @@ Future<void> main() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
 
   // load configuration
-  String? sandbox = prefs.getString(PrefsKeys.sandBox.toString());
-  if (sandbox == null || (sandbox != Sandbox.production.toString() && sandbox != Sandbox.development.toString())) {
-    if (kReleaseMode) {
-      sandbox = Sandbox.production.toString();
-    } else {
-      sandbox = Sandbox.development.toString();
-    }
-    prefs.setString(PrefsKeys.sandBox.toString(), sandbox);
-  }
-  if (sandbox == Sandbox.production.toString()) {
+  if (kReleaseMode) {
     await dotenv.load(fileName: "assets/.env_production");
-  } else if (sandbox == Sandbox.development.toString()) {
+  } else {
     await dotenv.load(fileName: "assets/.env_development");
   }
 
